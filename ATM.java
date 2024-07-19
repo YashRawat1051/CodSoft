@@ -50,7 +50,7 @@ public class ATM extends JFrame {
                 } else {
                     messageLabel.setText("Insufficient funds.");
                 }
-                updateBalance();
+                
             } catch (NumberFormatException ex) {
                 messageLabel.setText("Please enter a valid amount.");
             }
@@ -64,7 +64,7 @@ public class ATM extends JFrame {
                 double amount = Double.parseDouble(amountField.getText());
                 account.deposit(amount);
                 messageLabel.setText("Deposit successful.");
-                updateBalance();
+                
             } catch (NumberFormatException ex) {
                 messageLabel.setText("Please enter a valid amount.");
             }
